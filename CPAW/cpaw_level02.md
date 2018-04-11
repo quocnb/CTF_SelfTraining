@@ -2,21 +2,28 @@
 
 ## LEVEL 2 ##
 
+| Point | Question | Answer | Done Percent
+| -- | -- | -- | -- |
+| 100 | 10 | 10 | 100% |
+
 - [x] [Stego]隠されたフラグ
 - [x] [Web] Redirect
 - [x] [Network+Forensic]HTTP Traffic
-- [ ] [Recon]Who am I ?
+- [x] [Recon]Who am I ?
 - [x] [Forensic]leaf in forest
 - [x] [Misc]Image!
 - [x] [Crypto]Block Cipher
-- [ ] [Reversing]reversing easy!
-- [ ] [Web]Baby's SQLi - Stage 1
+- [x] [Reversing]reversing easy!
+- [x] [Web]Baby's SQLi - Stage 1
 - [x] [Network] Can you login？
 
 ### [Stego]隠されたフラグ ###
 You can see the `morse code` in the top-left and bottom-right of the image.
 
-flag is `cpaw{hidden_message:)}`
+flag is
+```
+cpaw{hidden_message:)}
+```
 
 ### [Web] Redirect ###
 Check url header info
@@ -39,6 +46,16 @@ Open the `network100` the source code, change the `image.jpg` and `button2.js` f
 Just run `network100` by web-browser and see the flag
 ```
 cpaw{Y0u_r3st0r3d_7his_p4ge}
+```
+
+### Recon]Who am I ? ###
+Search google with keyword
+```
+スペシャルフォース2 porisuteru
+```
+You can get the character's name in the image
+```
+cpaw{parock}
 ```
 
 ### [Forensic]leaf in forest ###
@@ -70,6 +87,22 @@ Just run the `crypto100.c` with parameter
 Flag
 ```
 cpaw{Your_deciphering_skill_is_great}
+```
+
+### [Reversing]reversing easy! ###
+Just simple revert the `ELF 32-bit` to hex, you can get the flag
+```
+cpaw{yakiniku!}
+```
+
+### [Web]Baby's SQLi - Stage 1 ###
+Just enter the MySQL
+```
+select * from palloc_home
+```
+The flag in row 2
+```
+cpaw{palloc_escape_from_stage1;(}
 ```
 
 ### [Network] Can you login？ ###
